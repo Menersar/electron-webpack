@@ -2,7 +2,6 @@
   "name": "sidekick-electron-webpack",
   "private": true,
   "license": "MIT",
-  "author": "Vladimir Krivosheev <develar@gmail.com>",
   "scripts": {
     "compile": "cross-env ts-babel packages/electron-webpack test && yarn schema",
     "lint": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/electron-webpack --exclude \"**/*.js\"",
