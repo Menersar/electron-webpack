@@ -1,5 +1,5 @@
 {
-  "name": "electron-webpack",
+  "name": "sidekick-electron-webpack",
   "private": true,
   "license": "MIT",
   "author": "Vladimir Krivosheev <develar@gmail.com>",
