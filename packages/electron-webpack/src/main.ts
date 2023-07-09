@@ -292,7 +292,8 @@ export class WebpackConfigurator {
     externals.push("electron-devtools-installer")
     if (this.type === "main") {
       externals.push("webpack/hot/log-apply-result")
-      externals.push("electron-webpack/out/electron-main-hmr/HmrClient")
+      // externals.push("electron-webpack/out/electron-main-hmr/HmrClient.git")
+      externals.push("git@github.com:Menersar/electron-webpack/packages/electron-webpack/out/electron-main-hmr/HmrClient.git")
       externals.push("source-map-support/source-map-support.js")
     }
 
