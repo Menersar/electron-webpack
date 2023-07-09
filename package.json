@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "cross-env ts-babel packages/electron-webpack test && yarn schema",
-    "compile:sidekick": "cross-env ts-babel packages/sidekick-electron-webpack test:sidekick && yarn schema:sidekick",
+    "compile:sidekick": "cross-env ts-babel packages/sidekick-electron-webpack test && yarn schema:sidekick",
     "lint": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/electron-webpack --exclude \"**/*.js\"",
     "lint:sidekick": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/sidekick-electron-webpack --exclude \"**/*.js\"",
     "release": "BABEL_ENV=production yarn compile && ./npm-publish.sh",
