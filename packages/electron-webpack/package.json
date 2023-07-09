@@ -2,7 +2,6 @@
   "name": "sidekick-electron-webpack",
   "version": "2.8.2",
   "license": "MIT",
-  "author": "Vladimir Krivosheev <develar@gmail.com>",
   "main": "out/main.js",
   "files": [
     "out",
