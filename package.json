@@ -1,17 +1,26 @@
 {
-  "name": "electron-webpack",
+  "name": "sidekick-electron-webpack",
   "private": true,
   "license": "MIT",
   "scripts": {
     "compile": "cross-env ts-babel packages/electron-webpack test && yarn schema",
+    "compile:sidekick": "cross-env ts-babel packages/sidekick-electron-webpack test:sidekick && yarn schema:sidekick",
     "lint": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/electron-webpack --exclude \"**/*.js\"",
+    "lint:sidekick": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/sidekick-electron-webpack --exclude \"**/*.js\"",
     "release": "BABEL_ENV=production yarn compile && ./npm-publish.sh",
+    "release:sidekick": "BABEL_ENV=production yarn compile:sidekick && ./npm-publish.sh",
     "test": "yarn compile && yarn lint && jest",
+    "test:sidekick": "yarn compile:sidekick && yarn lint:sidekick && jest",
     "serve-docs": "mkdocs serve",
+    "serve-docs:sidekick": "mkdocs serve",
     "deploy-docs": "mkdocs build --clean && netlifyctl deploy --publish-directory site",
+    "deploy-docs:sidekick": "mkdocs build --clean && netlifyctl deploy --publish-directory site",
     "schema": "ts-json-schema-generator --path \"packages/electron-webpack/src/**/*.ts\" --no-top-ref --no-type-check --type ElectronWebpackConfiguration --expose export > packages/electron-webpack/scheme.json",
+    "schema:sidekick": "ts-json-schema-generator --path \"packages/sidekick-electron-webpack/src/**/*.ts\" --no-top-ref --no-type-check --type ElectronWebpackConfiguration --expose export > packages/sidekick-electron-webpack/scheme.json",
     "//": "update-deps task intended only for core maintainers",
-    "update-deps": "npm-check-updates -u && npx lerna exec -- npm-check-updates -u"
+    "//:sidekick": "update-deps task intended only for core maintainers",
+    "update-deps": "npm-check-updates -u && npx lerna exec -- npm-check-updates -u",
+    "update-deps:sidekick": "npm-check-updates -u && npx lerna exec -- npm-check-updates -u"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.30",

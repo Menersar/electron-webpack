@@ -1,5 +1,5 @@
 .DS_Store
-/packages/*/out/
+# /packages/*/out/
 node_modules/
 lerna-debug.log
 packages/electron-webpack/readme.md
