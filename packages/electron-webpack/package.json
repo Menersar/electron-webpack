@@ -1,5 +1,5 @@
 {
-  "name": "sidekick-electron-webpack",
+  "name": "@electron/sidekick-electron-webpack",
   "version": "2.9.1",
   "license": "MIT",
   "main": "out/main.js",
