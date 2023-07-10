@@ -239,8 +239,9 @@ class WebpackConfigurator {
       output: {
         filename: "[name].js",
         chunkFilename: "[name].bundle.js",
-        // libraryTarget: "commonjs2",
-        libraryTarget: "umd",
+        // !!
+        libraryTarget: "commonjs2",
+        // libraryTarget: "umd",
         path: path.join(this.commonDistDirectory, this.type)
       },
       target: this.isTest ? "node" : `electron-${this.type === "renderer-dll" ? "renderer" : this.type}`,
@@ -345,7 +346,7 @@ class WebpackConfigurator {
     if (this.type === "main") {
       externals.push("webpack/hot/log-apply-result");
       // externals.push("electron-webpack/out/electron-main-hmr/HmrClient")
-      externals.push("electron-webpack/out/electron-main-hmr/HmrClient");
+      externals.push("sidekick-electron-webpack/out/electron-main-hmr/HmrClient");
       externals.push("source-map-support/source-map-support.js");
     }
     if (this.electronWebpackConfiguration.externals != null) {
