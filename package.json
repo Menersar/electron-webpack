@@ -1,5 +1,5 @@
 {
-  "name": "sidekick-electron-webpack",
+  "name": "electron-webpack",
   "private": true,
   "license": "MIT",
   "scripts": {
