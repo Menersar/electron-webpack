@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 set -e
 
 # ln -f readme.md packages/electron-webpack/readme.md

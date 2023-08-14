@@ -5,7 +5,10 @@
   "scripts": {
     "compile": "cross-env ts-babel packages/electron-webpack test && yarn schema",
     "lint": "tslint -c ./node_modules/electron-builder-tslint-config/tslint.json -p packages/electron-webpack --exclude \"**/*.js\"",
-    "release": "BABEL_ENV=production yarn compile && ./npm-publish.sh",
+    "release1": "BABEL_ENV=production yarn compile && ./npm-publish.sh",
+    "//": "cd ~ && cd /mnt/c/Users/mener/Desktop/sidekick-application/ ... && sh *.sh",
+    "release": "bash ./npm-publish.sh",
+    "release3": "yarn compile && ./npm-publish.sh",
     "test": "yarn compile && yarn lint && jest",
     "serve-docs": "mkdocs serve",
     "deploy-docs": "mkdocs build --clean && netlifyctl deploy --publish-directory site",
