@@ -8,3 +8,4 @@ npm publish packages/electron-webpack || true
 # npm publish packages/electron-webpack-js || true
 # npm publish packages/electron-webpack-ts || true
 # npm publish packages/electron-webpack-vue || true
+ 
