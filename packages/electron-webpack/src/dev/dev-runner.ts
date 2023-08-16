@@ -39,7 +39,9 @@ async function emptyMainOutput() {
 
 class DevRunner {
   async start() {
+    // !!! NEU
     const wdsHost = "localhost"
+    // const wdsHost = "0.0.0.0"
     const wdsPort = await getFreePort(wdsHost, 9080)
     const env = {
       ...getCommonEnv(),
