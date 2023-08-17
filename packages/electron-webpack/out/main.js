@@ -192,6 +192,7 @@ class WebpackConfigurator {
   getSourceDirectory(type) {
     const part = this.getPartConfiguration(type);
     if (part === null || part != null && part.sourceDirectory === null) {
+      // !!! 'part', 'sourceDirectory'? ???
       // part or sourceDirectory is explicitly set to null
       return null;
     }
@@ -344,7 +345,7 @@ class WebpackConfigurator {
     externals.push("electron-devtools-installer");
     if (this.type === "main") {
       externals.push("webpack/hot/log-apply-result");
-      externals.push("sidekick-electron-webpack/out/electron-main-hmr/HmrClient");
+      externals.push("@sidekick/electron-webpack/out/electron-main-hmr/HmrClient");
       //   externals.push("electron-webpack/out/electron-main-hmr/HmrClient")
       externals.push("source-map-support/source-map-support.js");
     }
